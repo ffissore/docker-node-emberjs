@@ -14,3 +14,6 @@ RUN \
 	make &&\
 	make install
 
+EXPOSE 4200 35729
+WORKDIR /app
+
