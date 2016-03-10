@@ -1,8 +1,8 @@
-FROM node:4.2.6
+FROM node:4
 
-RUN npm install -g ember-cli@1.13.15
-RUN npm install -g bower@1.7.7
-RUN npm install -g phantomjs@1.9.19
+RUN npm install -g ember-cli
+RUN npm install -g bower
+RUN npm install -g phantomjs
 
 # install watchman
 RUN \
@@ -14,6 +14,8 @@ RUN \
 	make &&\
 	make install
 
-EXPOSE 4200 35729
+RUN rm -rf /root/.npm
+
+EXPOSE 4200
 WORKDIR /app
 
