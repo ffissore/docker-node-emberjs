@@ -1,4 +1,4 @@
-FROM node:6
+FROM node:4
 
 RUN npm install -g ember-cli
 RUN npm install -g bower
